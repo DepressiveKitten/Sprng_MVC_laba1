@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Random guess</title>
+</head>
+<body>
+
+<form method="Get" action="/random">
+    <label for="num">Enter your guess: </label>
+    <input name = "num" type="text" th:value="${input}" id="num"/>
+    <br>
+    <br>
+    <div th:text="${InfoString}"/>
+    Total guesses: <span th:text="${TotalGuesses}"/>
+    <br>
+    <br>
+    <input type="submit" value="Guess!"/>
+</form>
+<br>
+<form method="Post" action="/random">
+    <input type="submit" value="Change number!"/>
+</form>
+</body>
+</html>
